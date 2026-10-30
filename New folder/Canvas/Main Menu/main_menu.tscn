@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bknwr0bg8pmlj"]
+
+[ext_resource type="Script" uid="uid://41ow6q0hjukc" path="res://Canvas/Main Menu/play.gd" id="1_6aur4"]
+[ext_resource type="Script" uid="uid://bgq6yu34c72c7" path="res://Canvas/Main Menu/quit.gd" id="2_gqvdd"]
+[ext_resource type="Texture2D" uid="uid://nuv1wu3fd4y0" path="res://Canvas/Main Menu/Gemini_Generated_Image_991t3s991t3s991t.jpeg" id="3_6aur4"]
+
+[node name="Main Menu" type="Control" unique_id=1281271638]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" type="Button" parent="." unique_id=49005489]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 120.0
+offset_right = 371.0
+offset_bottom = 185.0
+text = "Play"
+script = ExtResource("1_6aur4")
+
+[node name="Quit" type="Button" parent="." unique_id=1043370162]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 202.0
+offset_right = 372.0
+offset_bottom = 267.0
+text = "Quit"
+script = ExtResource("2_gqvdd")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1645952149]
+z_index = -1
+z_as_relative = false
+position = Vector2(576, 324.75)
+scale = Vector2(0.8372093, 0.8430989)
+texture = ExtResource("3_6aur4")
+
+[connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
+[connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bjdlmgvneo7oj"]
+
+[ext_resource type="PackedScene" uid="uid://cpfyxbrebilqk" path="res://Arenas/Arena-0.tscn" id="1_80nbo"]
+
+[node name="Node3D" type="Node3D" unique_id=730671545]
+
+[node name="Arena-0" parent="." unique_id=1781304044 instance=ExtResource("1_80nbo")]

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bks0my5pem1g4"]
+
+[ext_resource type="Script" uid="uid://dq7fpviybn7yj" path="res://Mechanics/player_1.gd" id="1_uve2d"]
+
+[node name="Mechanics & Resources" type="Node" unique_id=1142912093]
+
+[node name="Killzone" type="Area2D" parent="." unique_id=395038670]
+
+[node name="Hurtbox (scanable area)" type="Area2D" parent="." unique_id=2017363897]
+
+[node name="Hitbox (scanning area)" type="Area2D" parent="." unique_id=1458034286]
+
+[node name="Stats" type="Node" parent="." unique_id=905340242]
+
+[node name="Player-1" type="CharacterBody2D" parent="." unique_id=72265965]
+script = ExtResource("1_uve2d")
+
+[node name="Player-2" type="CharacterBody2D" parent="." unique_id=1476719658]
