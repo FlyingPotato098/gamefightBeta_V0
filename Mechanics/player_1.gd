@@ -21,6 +21,7 @@ enum State {
 ## the state names in lowercase: idle, move, up, down, passive_attack,
 ## ability_attack, parry, charging.
 @export var sprite: AnimatedSprite2D
+@export var owner_stats: Stats
 
 @export_group("Movement")
 @export var speed := 300.0
@@ -33,7 +34,7 @@ enum State {
 @export var action_left := "p1_left"
 @export var action_right := "p1_right"
 @export var action_jump := "jump" 
-@export var action_up := "up"      # this is the JUMP button
+@export var action_up := "up"      
 @export var action_down := "p1_down"
 @export var action_passive_attack := "p1_passive_attack"
 @export var action_ability_attack := "p1_ability_attack"
@@ -145,7 +146,8 @@ func handle_movement(delta: float) -> void:
 
 	move_and_slide()
 
-
+func handle_knockback(_knockback_score):
+	pass
 # -------------------------------------------------------------- ANIMATION
 func handle_animation() -> void:
 	if sprite == null:

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bks0my5pem1g4"]
+
+[ext_resource type="Script" uid="uid://dq7fpviybn7yj" path="res://Mechanics/player_1.gd" id="1_uve2d"]
+[ext_resource type="Script" uid="uid://cll3ds7sicobw" path="res://Mechanics/stats.gd" id="1_yjky8"]
+[ext_resource type="Script" uid="uid://b7fvw10lxubgn" path="res://Mechanics/hurtbox.gd" id="2_cgsbg"]
+[ext_resource type="Script" uid="uid://d0l36dwx3feb8" path="res://Mechanics/hitbox.gd" id="3_7cffh"]
+[ext_resource type="Script" uid="uid://dvxnuv7vw5bq3" path="res://Mechanics/danger_zone.gd" id="5_7cffh"]
+
+[node name="Mechanics & Resources" type="Node" unique_id=1142912093]
+
+[node name="Constants" type="Node" parent="." unique_id=1280016152]
+
+[node name="Stats" type="Node" parent="." unique_id=905340242]
+script = ExtResource("1_yjky8")
+
+[node name="Killzone" type="Area2D" parent="." unique_id=395038670]
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=2017363897]
+script = ExtResource("2_cgsbg")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1458034286]
+script = ExtResource("3_7cffh")
+
+[node name="Player-1" type="CharacterBody2D" parent="." unique_id=72265965]
+script = ExtResource("1_uve2d")
+
+[node name="Player-2" type="CharacterBody2D" parent="." unique_id=1476719658]
+
+[node name="Danger_zone" type="Area2D" parent="." unique_id=654425364]
+script = ExtResource("5_7cffh")

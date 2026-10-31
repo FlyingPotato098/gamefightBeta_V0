@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://cpfyxbrebilqk"]
 
 [ext_resource type="Texture2D" uid="uid://btv4cxsf6no8d" path="res://icon.svg" id="1_amsiq"]
-[ext_resource type="PackedScene" uid="uid://cmib2nbrvo3mk" path="res://Characters/Test/Stickman Yellow/physicist.tscn" id="2_22bd6"]
+[ext_resource type="PackedScene" uid="uid://cmib2nbrvo3mk" path="res://Characters/Test/Stickman Yellow/Yellow.tscn" id="1_b8aaa"]
+[ext_resource type="Texture2D" uid="uid://1jjvxh4qyqla" path="res://Tests&Expermntation/dangerzone spike-1.png" id="3_b8aaa"]
+[ext_resource type="Script" uid="uid://8blxrhfkso30" path="res://Arenas/Arena-0/Test/danger_zone_0.gd" id="4_yr6po"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yr6po"]
+radius = 32.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_22bd6"]
 texture = ExtResource("1_amsiq")
@@ -140,6 +145,21 @@ sources/1 = SubResource("TileSetAtlasSource_22bd6")
 
 [node name="Arena-0" type="Node2D" unique_id=1781304044]
 
+[node name="DangerZone" type="Area2D" parent="." unique_id=630590754]
+position = Vector2(774, -49)
+script = ExtResource("4_yr6po")
+shape = SubResource("CircleShape2D_yr6po")
+metadata/_custom_type_script = "uid://dvxnuv7vw5bq3"
+
+[node name="Sprite2D" type="Sprite2D" parent="DangerZone" unique_id=1090162753]
+texture = ExtResource("3_b8aaa")
+
+[node name="Timer" type="Timer" parent="DangerZone" unique_id=83934092]
+autostart = true
+
+[node name="Yellow" parent="." unique_id=1165394222 instance=ExtResource("1_b8aaa")]
+position = Vector2(455, -116)
+
 [node name="TileMap" type="TileMap" parent="." unique_id=1878827822]
 tile_set = SubResource("TileSet_13qdw")
 format = 2
@@ -148,5 +168,4 @@ layer_0/tile_data = PackedInt32Array(-65536, 262145, 2, -65535, 262145, 2, -6553
 [node name="Camera2D" type="Camera2D" parent="." unique_id=181051449]
 position = Vector2(517, -246)
 
-[node name="Physicist" parent="." unique_id=1165394222 instance=ExtResource("2_22bd6")]
-position = Vector2(457, -152)
+[connection signal="timeout" from="DangerZone/Timer" to="DangerZone" method="_on_timer_timeout"]

@@ -112,6 +112,11 @@ shield={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_4="Team Blue Hurtbox (1)"
+2d_physics/layer_5="Team Red Hurtbox (2)"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
